@@ -1,0 +1,157 @@
+.formField .imgDiv {
+    display: flex;
+    align-items: center;
+}
+
+
+.clientViewDiv {
+    display: flex;
+    gap: 2rem
+}
+
+.formDiv .formLabel {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.formDiv .formLabel > * {
+    margin: 0;
+}
+
+.formDiv .formLabel p {
+    width: 6rem;
+}
+
+
+.formDiv .formInput {
+    width: 30rem;
+    pointer-events: none;
+}
+
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+
+/* configs */
+.crudDiv{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 1rem;
+}
+
+.crudDiv input[type=submit] {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: .15rem solid var(--hover-color);
+    border-radius: 4px;
+}
+
+.crudDiv input[type=submit]:hover {
+    background-color: rgba(204, 204, 255, 0.744);
+}
+
+.actionLabel {
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.actionLabel input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.actionLabel span {
+    width: 100%;
+    height: 100%;
+}
+
+
+.actionLabel img {
+    width: 100%;
+    display: block;
+}
+
+.crudDiv .actionLabel img {
+    transform: translate(25%);
+}
+
+.actionLabel input[type=button] + span{
+    background-color: transparent;
+    transform: translate(-25%);
+}
+
+.actionLabel:has(input:focus) {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.actionLabel:has(input[type=checkbox]:checked), 
+.formLabel:has(.formInput:focus) > .actionLabel {
+    background-color: rgb(142, 250, 142);
+    box-shadow: 0 0 4px  #000;
+}
+
+.actionLabel:has(input[type=checkbox]:disabled){
+    opacity: 0.2;
+}
+
+.actionLabel span {
+    width: 16px;
+    height: 16px;
+}
+
+
+.actionLabel:has(input[type=checkbox]:checked) + .formInput {
+    pointer-events: all;
+}
+
+
+/* ------ TABLE ------- */
+.osDiv {
+    margin: 4rem 0;
+}
+table {
+    width: 100%;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+}
+
+thead th, tfoot td {
+    border: .2rem solid #000;
+    padding: 1rem;
+    background-color: rgb(166, 166, 208);
+}
+
+td {
+    max-width: 30rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(2n){
+    background-color: rgba(204, 204, 255, 0.744);
+}
+
+tbody td{
+    border: .2rem solid var(--hover-color);
+}
+
+tfoot {
+    background-color: rgb(166, 166, 208);
+}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font: normal 62.5% Roboto;
+    --main-color: #3a68b7;
+    --hover-color: #223d6c;
+}
+
+body {
+    width: 100%;
+    height: 800px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myForm{
+    background-color: #FFF;
+    padding: 2rem;
+    box-shadow: -7px 2px 1px rgba(0, 0, 0, .4);
+}
+
+.formField {
+    border: none;
+    padding: 1rem;
+}
+
+.myForm :where(label,input){
+    display: block;
+}
+
+.formTitle {
+    color: var(--main-color);
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+:where(.formLabel, .formTitle) {
+    font-weight: 300;
+}
+
+.formLabel {
+    color: #AAA;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.formInput {
+    width: 40rem;
+    height: 4rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.25rem solid var(--main-color);
+    margin-bottom: 2.5rem;
+    transition: padding .3s ease, border .1s ease;
+}
+
+
+textarea.formInput {
+    height: 10rem;
+    resize: none;
+}
+
+.formInput:focus {
+    border: 0.25rem solid var(--main-color);
+    padding: 1rem;
+}
+
+.formInput:valid {
+    border-color: #0f9129;
+}
+
+.actionsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonsDiv {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.buttonsDiv .actionButton {
+    background-color: var(--main-color);
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+}
+
+.registerLink {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.actionButton:hover{
+    background-color: var(--hover-color);
+} .registerLink:hover {
+    color: var(--hover-color);
+}
+
+.secundaryLinkSpan, .secundaryLink {
+    font-size: 1.4rem;
+    margin-left: .3rem;
+}
+
+
+.inputDivision {
+    width: 40rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.wrapperLabel {
+    flex: 1 0 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperLabel input {
+    width: auto;
+}
+
+/* ------------- HOME ---------------- */
+
+
+
+/* ----------- SEARCH ------------- */
+#searchIpt:valid {
+    border-color: #000;
+}
+
+.searchOptions {
+    margin-bottom: 3rem;
+}
+
+.searchOptions label {
+    font-size: 1.4rem;
+    display: flex;
+    gap: .3rem;
+    margin-bottom: .5rem;
+}
+
+.searchContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.searchContainer .searchInput {
+    padding: 1rem;
+    border: 0.25rem solid var(--main-color);
+}
+
+.searchContainer .searchInput{
+    font-size: 0;
+    width: 4rem;
+    height: 4rem;
+    background: url('../images/lupa.png') no-repeat center;
+    border: none;
+    border-bottom: 2px solid var(--hover-color);
+    cursor: pointer;
+}
+
+.entityField {
+    margin: 2rem 0;
+    border: none;
+}
+
+.entitySelect {
+    width: 50rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.entitySelect option {
+    padding: .4rem;
+}
+
+.entitySubmit {
+    background-color: var(--main-color);
+    color: #FFF;
+    text-transform: uppercase;
+    padding: .6rem 2rem;
+    border: .2rem solid #000;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.entitySubmit:hover {
+    background-color: #FFF;
+    color: var(--main-color);
+}
+
+
+/*
+id
+*/
